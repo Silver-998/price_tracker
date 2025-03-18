@@ -40,6 +40,7 @@ def display_loop():
    
 
 def fetch_price():
+    global display_text
     try:
         response = requests.get(binance_url)
         data = response.json()
