@@ -47,8 +47,8 @@ def fetch_price():
         # Format the price with commas for 1/10.000
         price_float = float(data['price'])
         price_fm = f"${price_float:,.5f}"
-        display_text = price_fm
-       # print(f"{data['symbol']}: {formatted_price}")
+        display_text = str(price_fm)
+        print(price_fm)
         
     except Exception as e:
         print(f"Error fetching price: {e}")
@@ -66,6 +66,6 @@ def main():
         print("\nShutting down...")
         running = False
         time.sleep(1)
-asdsd
+
 if __name__ == "__main__":
     main()
