@@ -19,7 +19,7 @@ binance_ws_url = f"wss://fstream.binance.com/ws/{symbol}@ticker"
 
 # Use thread lock for thread-safe access to shared variables
 lock = threading.Lock()
-display_text = "Connecting..."
+display_text = "Connecting"
 last_update_time = time.time()
 running = True
 
@@ -41,7 +41,7 @@ def update_display():
         
         # Draw price
         font = ImageFont.load_default(size=24)
-        draw.text((3, 3), str(current_text), font=font, fill="white")
+        draw.text((3, 1), str(current_text), font=font, fill="white")
        
         
         # Display image
